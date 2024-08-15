@@ -1,0 +1,58 @@
+
+Last login: Thu Aug 15 08:45:22 on ttys002
+
+#git_challengeのフォルダ作成
+takashi@munekinshinoAir ~ % cd
+takashi@munekinshinoAir ~ % mkdir git_challenge
+takashi@munekinshinoAir ~ % cd git_challenge
+takashi@munekinshinoAir git_challenge % git init
+Initialized empty Git repository in /Users/takashi/git_challenge/.git/
+
+#hello_world.txtを作成
+takashi@munekinshinoAir git_challenge % echo "Hello, World" > hello_world.txt
+takashi@munekinshinoAir git_challenge % git add hello_world.txt
+takashi@munekinshinoAir git_challenge % git commit -m "Add hello_world.txt"
+[main (root-commit) 8a43f3d] Add hello_world.txt
+ Committer: 棟近貴志 <takashi@munekinshinoAir.hsd1.il.comcast.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+takashi@munekinshinoAir git_challenge % 
+
+#テキストに"こんにちは、世界を追記"
+takashi@munekinshinoAir git_challenge % echo "こんにちは、世界" >> hello_world.txt
+takashi@munekinshinoAir git_challenge % git add hello_world.txt
+takashi@munekinshinoAir git_challenge % git commit -m "追記:こんにちは世界"
+[main cf8d4f2] 追記:こんにちは世界
+ Committer: 棟近貴志 <takashi@munekinshinoAir.hsd1.il.comcast.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+#変更履歴の表示
+takashi@munekinshinoAir git_challenge % git log --oneline
+
+cf8d4f2 (HEAD -> main) 追記:こんにちは世界
+8a43f3d Add hello_world.txt
+takashi@munekinshinoAir git_challenge % 
